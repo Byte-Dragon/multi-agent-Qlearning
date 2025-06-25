@@ -66,6 +66,7 @@ if __name__ == '__main__':
                 # rendering
             # end for agent i
 
+
             obs_n = obs_n1  # 把下一状态赋值给obs_n，准备开始下一步。
 
             # set actions for scripted agents
