@@ -39,7 +39,7 @@ if __name__ == '__main__':
             for i, policy in enumerate(policies):
                 # 离散化
                 # print(f'step: {step}, origin:{obs_n[i][:env.world.dim_p]}, dis:{discretizer.discretize_point(obs_n[i][:env.world.dim_p])}')
-                obs_n[i][:env.world.dim_p] = conf.DISCRETIEZER.discretize_point(obs_n[i][:env.world.dim_p])
+                # obs_n[i][:env.world.dim_p] = conf.DISCRETIEZER.discretize_point(obs_n[i][:env.world.dim_p])
                 act_i, act_index_i = policy.action(obs_n[i], eps)
                 act_n.append(act_i)
                 act_index_n.append(act_index_i)
@@ -47,7 +47,7 @@ if __name__ == '__main__':
             # 执行动作
             obs_n1, reward_n, done_n, info_n = env.step(act_n)
             # 离散化
-            obs_n1[i][:env.world.dim_p] = conf.DISCRETIEZER.discretize_point(obs_n1[i][:env.world.dim_p])
+            # obs_n1[i][:env.world.dim_p] = conf.DISCRETIEZER.discretize_point(obs_n1[i][:env.world.dim_p])
             # update Q-function based on the reward for all agents
             for i in range(len(obs_n)):
                 # i 代表的是agent i
