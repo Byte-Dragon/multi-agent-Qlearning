@@ -1,0 +1,6 @@
+multiagent~=0.0.1
+setuptools~=57.0.0
+numpy~=1.24.4
+pyglet~=2.0.18
+gym~=0.26.2
+six~=1.16.0
